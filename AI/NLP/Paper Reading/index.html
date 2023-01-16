@@ -721,10 +721,16 @@
 </li>
 <li>
 <p>将问题作为输入，输入至 TEBC-Net，返回一个映射向量，计算两向量间的向量空间距离并进行排序，完成 RE</p>
-<ul>
-<li>对于给定问题进行知识抽取，方法中考虑下述三项核心因素：词的全局特征、词的字符特征、词的重要性</li>
-<li>Transformer Encoding layer 中的 self-attention mechanism 对词语重要性过滤编码</li>
-<li>CNN 表示待编码问题特征</li>
+</li>
+<li>
+<p>对于给定问题进行知识抽取，方法中考虑下述三项核心因素：词的全局特征、词的字符特征、词的重要性</p>
+</li>
+<li>
+<p>Transformer Encoding layer 中的 self-attention mechanism 对词语重要性过滤编码</p>
+</li>
+<li>
+<p>CNN 表示待编码问题特征</p>
+</li>
 <li>
 <p>BiLSTM 双向机制代替 Transformer 三角位置编码，以对生成词上下文序列正确编码 </p>
 <ul>
@@ -733,16 +739,23 @@
 </ul>
 </li>
 <li>
-<p>TEBC - Net   ![[TEBC - Net.png]]</p>
+<p>TEBC - Net  </p>
 </li>
-<li>Left Part —— Global Features with Importance<ul>
+</ol>
+<figure>
+<p><img alt="TEBC - Net" src="https://raw.githubusercontent.com/W-ZN/Images/main/Blog/NLPTEBC%20-%20Net.png" width="500" /><figcaption>TEBC - Net</figcaption></p>
+</figure>
+<ul>
+<li>
+<p>Left Part —— Global Features with Importance</p>
+<ul>
 <li>联合 BiLSTM 与 self-attention 对问题进行编码</li>
 </ul>
 </li>
-<li>Right Part —— Character Features with Importance  <ul>
+<li>
+<p>Right Part —— Character Features with Importance  </p>
+<ul>
 <li>联合 CNN 与 self-attention 对问题进行编码</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>
@@ -751,13 +764,15 @@
 <li>在 KEQA 框架下，在 KG 中与 QA 有关系的任务主要有三个 (HED)<ul>
 <li>头部实体识别</li>
 <li>关系抽取</li>
-<li>头部实体检测
-![[TEBC-Net HED.png]]</li>
+<li>头部实体检测</li>
 </ul>
 </li>
 </ul>
 </li>
-</ol>
+</ul>
+<figure>
+<p><img alt="TEBC - Net HED" src="https://raw.githubusercontent.com/W-ZN/Images/main/Blog/NLPTEBC-Net%20HED.png" width="500" /><figcaption>TEBC - Net HED</figcaption></p>
+</figure>
 <p><strong>Conclusion</strong></p>
 <p>类似于 <em>Introduction</em>        </p>
 <hr />
