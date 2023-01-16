@@ -782,7 +782,7 @@
 <p>对于复杂 KBQA 的任务，给定一个由一组事实组成的 KB 作为输入， 其中主体与客体通过其关系进行链接。事实中的所有主体和对象构成了 KB 的实体集。考虑到可用的知识库，复杂 KBQA 任务旨在以 sequence of tokens 的格式回答复杂的自然语言问题。特别地，我们假设正确答案来自 KB 的实体集合。与简单 KBQA 的答案不同，这些答案是直接连接到主题实体的实体，而复杂 KBQA 任务的答案是距离主题实体多跳的实体，甚至是它们的一些聚合。</p>
 <p><em>Datasets</em></p>
 <p>通常来说，为了训练一个复杂的 KBQA 系统应该提供问题的答案。因此，针对复杂 KBQA 数据集的构建，做了很多工作。可用 (常用) 的数据集如下：</p>
-<p>![[Available Datasets.png|400]]</p>
+<p><img alt="Available Datasets.png" src="https://raw.githubusercontent.com/W-ZN/Images/main/Blog/NLPAvailable%20Datasets.png" /></p>
 <p>总体而言，这些数据集是通过以下步骤构建的：</p>
 <ul>
 <li>给定 KB 中的一个主题实体作为问题主体</li>
@@ -794,7 +794,7 @@
 <p>KBQA 系统通常预测置信度得分最高的实体形成答案集。这也同时告诉我们，对一个问题我们可以产生多个答案。在以往的研究中，有一些经典的评价指标，如：精确率、召回率、F1和 Hits@1。准确率表示正确答案占所有预测答案的比例，召回率是正确预测答案占所有真实答案的比例。</p>
 <p><strong>3 Two Mainstream Approaches</strong></p>
 <p>上述两种方法遵循着解析-执行范式 <span class="arithmatex"><span class="MathJax_Preview">(parse-then - excute)</span><script type="math/tex">(parse-then - excute)</script></span> 或检索-排序范式 <span class="arithmatex"><span class="MathJax_Preview">(retrieval-and-rank)</span><script type="math/tex">(retrieval-and-rank)</script></span></p>
-<p>![[SP and IR.png|400]]</p>
+<p><img alt="SP and IR.png" src="https://raw.githubusercontent.com/W-ZN/Images/main/Blog/NLPSP%20and%20IR.png" /></p>
 <p><em>Semantic Parsing-based Methods</em></p>
 <p>该类方法旨在将自然语言解析为逻辑形式。主要通过以下步骤进行对问题进行预测解答：</p>
 <ol>
@@ -808,15 +808,15 @@
 <ol>
 <li>由主题实体 (topic entity) 出发，系统首先从 KBs 中抽取出特定问题图。该图包含着所有问题的相关实体与关系，并分别将其作为节点与边。没有显式生成可执行的逻辑形式，而是对图进行推理，然后对图中的实体进行排序</li>
 <li>其次，系统通过 <u><em>question representation</em></u> 模块对输入问题进行编码。该模块分析问题的语义并输出推理指令，通常以向量的形式表示</li>
-<li><u><em>graph-based reasoning</em></u> 模块通过基于向量的计算进行语义匹配，将信息沿着图中的相邻实体进行传播和聚合。推理状态是在推理指令的基础上更新的，在不同的方法 (例如，预测实体的分布、关系的表示) 中有不同的定义。
-4.<u><em>answer ranking</em></u> 在推理结束时根据推理状态对图中实体进行排序。排名靠前的实体被预测为问题的答案。</li>
+<li><u><em>graph-based reasoning</em></u> 模块通过基于向量的计算进行语义匹配，将信息沿着图中的相邻实体进行传播和聚合。推理状态是在推理指令的基础上更新的，在不同的方法 (例如，预测实体的分布、关系的表示) 中有不同的定义。</li>
+<li><u><em>answer ranking</em></u> 在推理结束时根据推理状态对图中实体进行排序。排名靠前的实体被预测为问题的答案。</li>
 </ol>
 <p><em>Pros and Cons (优缺点)</em></p>
 <p>总的来说，SP-based methods 可以通过生成表达性逻辑形式，产生更具可解释性的推理过程。然后，他们很大程度上依赖于逻辑形式与解释算法的设计，这导致性能改进遇到瓶颈。</p>
 <p>与之比较，IR-based methods 对图结构进行复杂推理并进行语义匹配。这样的范式很自然地适合流行的端到端训练，使得该模型更容易训练。然而，推理模型的黑箱风格使得中间推理的可解释性较差。</p>
 <p><strong>4 Challenges and Solutions</strong></p>
 <p>由于上述方法是基于不同的范式发展起来的，下面将分别介绍两种主流方法在复杂KBQA中面临的挑战和相应的解决方案。下表总结了这些挑战和解决方案。</p>
-<p>![[Challenges and Solutions.png|650]]</p>
+<p><img alt="Challenges and Solutions.png" src="https://raw.githubusercontent.com/W-ZN/Images/main/Blog/NLPChallenges%20and%20Solutions.png" /></p>
 <p><strong>5 Conclusion and Future Directions</strong></p>
 <p>本文试图提供关于复杂 KBQA 的典型挑战和相应解决方案的概述。我们介绍了常用的数据集并总结了广泛使用的基于 SP 的方法和基于 IR 的方法。现有的复杂 KBQA 方法一般归纳为这两类。除此之外，其他一些方法能不属于这两类。例如，通过基于规则的分解将复杂问题转化为简单问题的组合方法，该方法侧重于问题分解，而不是基于 KBs 的推理或逻辑形式生成。我们相信，复杂知识库问答系统将继续成为一个活跃的、具有广阔应用前景的研究领域，如自然语言理解、组合泛化、多跳推理等。这项调查中提出的许多挑战仍然是开放的和探索不足的</p>
 <hr />
