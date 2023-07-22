@@ -742,11 +742,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gaussiandiffusion" class="md-nav__link">
-    GaussianDiffusion
+  <a href="#4gaussiandiffusion" class="md-nav__link">
+    4、GaussianDiffusion
   </a>
   
-    <nav class="md-nav" aria-label="GaussianDiffusion">
+    <nav class="md-nav" aria-label="4、GaussianDiffusion">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -769,11 +769,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#model" class="md-nav__link">
-    Model
+  <a href="#5model" class="md-nav__link">
+    5、Model
   </a>
   
-    <nav class="md-nav" aria-label="Model">
+    <nav class="md-nav" aria-label="5、Model">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1020,11 +1020,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gaussiandiffusion" class="md-nav__link">
-    GaussianDiffusion
+  <a href="#4gaussiandiffusion" class="md-nav__link">
+    4、GaussianDiffusion
   </a>
   
-    <nav class="md-nav" aria-label="GaussianDiffusion">
+    <nav class="md-nav" aria-label="4、GaussianDiffusion">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1047,11 +1047,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#model" class="md-nav__link">
-    Model
+  <a href="#5model" class="md-nav__link">
+    5、Model
   </a>
   
-    <nav class="md-nav" aria-label="Model">
+    <nav class="md-nav" aria-label="5、Model">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1718,7 +1718,7 @@
         <span class="n">accelerator</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;training complete&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>与一维逻辑基本相同，但在保存模型部分保存最优分数模型和最新模型。（主要是因为一维模型缺少度量机制）</p>
-<h2 id="gaussiandiffusion">GaussianDiffusion<a class="headerlink" href="#gaussiandiffusion" title="Permanent link">&para;</a></h2>
+<h2 id="4gaussiandiffusion">4、GaussianDiffusion<a class="headerlink" href="#4gaussiandiffusion" title="Permanent link">&para;</a></h2>
 <p>代码大致运行流程：</p>
 <ol>
 <li>
@@ -2405,7 +2405,7 @@
 <p><code>sample</code>函数：在<code>GaussianDiffusion</code>类中，这个函数需要根据<code>is_ddim_sampling</code>参数选择采样函数（<code>p_sample_loop</code>或<code>ddim_sample</code>），然后在一个循环中多次调用选定的采样函数进行采样，每次采样都需要生成一个新的图像。而在<code>GaussianDiffusion1D</code>类中，这个函数的实现更简单，只需要根据<code>is_ddim_sampling</code>参数选择采样函数（<code>p_sample_loop</code>或<code>ddim_sample</code>），然后在一个循环中多次调用选定的采样函数进行采样，每次采样都生成一个新的一维数据。</p>
 </li>
 </ol>
-<h2 id="model">Model<a class="headerlink" href="#model" title="Permanent link">&para;</a></h2>
+<h2 id="5model">5、Model<a class="headerlink" href="#5model" title="Permanent link">&para;</a></h2>
 <p>在DDPM（Denoising Diffusion Probabilistic Models）模型中，<code>model</code>的目标可以是<code>pred_noise</code>、<code>pred_x0</code>或<code>pred_v</code>，这些选项代表了不同的预测目标，具体如下：</p>
 <ol>
 <li>
