@@ -587,6 +587,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#论文-4" class="md-nav__link">
+    论文 4：
+  </a>
+  
+    <nav class="md-nav" aria-label="论文 4：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learn-to-explain-multimodal-reasoning-via-thought-chains-for-science-question-answering" class="md-nav__link">
+    Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#论文-5" class="md-nav__link">
+    论文 5：
+  </a>
+  
+    <nav class="md-nav" aria-label="论文 5：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-vlog-multimodal-vlog-dataset-for-depression-detection" class="md-nav__link">
+    D-vlog: Multimodal Vlog Dataset for Depression Detection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -824,6 +864,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#论文-4" class="md-nav__link">
+    论文 4：
+  </a>
+  
+    <nav class="md-nav" aria-label="论文 4：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learn-to-explain-multimodal-reasoning-via-thought-chains-for-science-question-answering" class="md-nav__link">
+    Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#论文-5" class="md-nav__link">
+    论文 5：
+  </a>
+  
+    <nav class="md-nav" aria-label="论文 5：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-vlog-multimodal-vlog-dataset-for-depression-detection" class="md-nav__link">
+    D-vlog: Multimodal Vlog Dataset for Depression Detection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -914,17 +994,65 @@
 <p>2、<strong>LearnableAlign</strong>：</p>
 <p>这种技术旨在解决激光雷达和相机特征之间的对齐问题。在多模态3D物体检测中，找出激光雷达和相机特征之间的对应关系是一个重要的挑战。LearnableAlign利用交叉注意力机制动态捕获两种模态之间的关联。具体来说，输入包含一个体素单元和所有对应的 N 个相机特征。LearnableAlign 使用三个全连接层分别将体素转换为查询 ql，以及相机特征转换为键 kc 和值 vc。对于每个查询（即，体素单元），我们在查询和键之间进行内积，得到注意力亲和矩阵，该矩阵包含 1 × N 个体素和所有对应的 N 个相机特征之间的关联。通过 softmax 操作符进行归一化，注意力亲和矩阵用于权重和聚合包含相机信息的值 vc。聚合的相机信息然后被一个全连接层处理，并最终与原始的激光雷达特征进行连接。输出最后被送入任何标准的3D检测框架，如 PointPillars 或 CenterPoint 进行模型训练。</p>
 <p>这两种技术都是简单、通用且高效的，可以轻松地应用到大多数基于体素的3D检测方法，如PointPillars和CenterPoint。目标都是在深度特征层面实现有效的对齐。通过使用这两种技术，DeepFusions模型能够有效地融合激光雷达和相机的特征，从而显著提高了模型的识别和定位能力，特别是对于远距离物体的检测。</p>
+<hr />
+<h2 id="论文-4">论文 4：<a class="headerlink" href="#论文-4" title="Permanent link">&para;</a></h2>
+<h4 id="learn-to-explain-multimodal-reasoning-via-thought-chains-for-science-question-answering">Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering<a class="headerlink" href="#learn-to-explain-multimodal-reasoning-via-thought-chains-for-science-question-answering" title="Permanent link">&para;</a></h4>
+<p><strong><em>学会解释：通过思维链进行多模态推理以回答科学问题</em></strong></p>
+<p><strong>Abstract</strong></p>
+<p>文章介绍了一个名为科学问题回答（SCIENCEQA）的新基准测试，它包含了21k个多模态选择题，涵盖了多样化的科学主题，并对其答案进行了注解，包括对应的讲座和解释。作者设计了语言模型，学习生成讲座和解释作为思维链（CoT），以模拟回答SCIENCEQA问题时的多跳推理过程。研究表明，语言模型从解释中受益，可以通过更少的数据学习，并且只需要40%的数据就能达到相同的性能。该论文探讨了在科学问题回答的背景下，是否可以赋予机器推理能力。</p>
+<p><strong>Content</strong></p>
+<p>文章的主要成果如下：</p>
+<ol>
+<li>该研究开发了一个名为Science Question Answering (SCIENCEQA)的新数据集，该数据集包含21,208个多模态科学问题，涵盖了丰富的领域多样性。据作者所知，SCIENCEQA是首个大规模的多模态数据集，为答案注释了讲解和解释。</li>
+<li>模型可以生成合理的解释，根据自动化指标进行评估，65.2%的解释达到了人类评估的黄金标准。他们还研究了模型利用解释的上限，通过将解释包含在输入中，发现这样做可以提高GPT-3的少数样本性能18.96%，这表明解释确实有助于模型，并且在CoT框架中目前被低估了。</li>
+<li>进一步分析显示，像人类一样，语言模型从解释中受益，可以用更少的数据进行学习：UniﬁedQA使用CoT可以获得与没有CoT的UniﬁedQA相同的结果，只需要40%的训练数据。</li>
+<li>研究还发现，GPT-3（CoT）可以预测正确的答案，并生成合理的讲解和解释，以模仿人类的思维过程。</li>
+<li>他们的研究还提供了一些失败的例子，这些例子中，预测的答案是错误的。他们将这些图像的标题提取出来，并将它们作为视觉内容输入。然而，这些标题缺乏细粒度的语义，通常对于图表不太有效，这导致了两个失败的案例。此外，对于需要理解复杂和不常见领域知识的问题，大型语言模型存在挑战。例如，GPT-3（CoT）不能准确理解“多选题”的术语。</li>
+<li>该研究的SCIENCEQA数据集和设计的方法对后续的研究工作和实际应用都有益。SCIENCEQA为多模态学习、多跳推理和通用人工智能提供了有用的基准。此外，SCIENCEQA将有助于K-12教育应用的开发，如辅导系统。此外，他们设计的方法通过思维链探索了大型语言模型在推理复杂任务时模仿人类思维过程的能力。</li>
+</ol>
+<p><strong>Dataset</strong></p>
+<p>SCIENCEQA数据集包含21,208个多模态科学问题，涵盖了丰富的领域多样性。据作者所知，SCIENCEQA是首个大规模的多模态数据集，为答案注释了讲解和解释。数据集的问题主要来源于教科书，旨在诊断AI系统的多模态理解和多跳推理能力。由于数据来源的性质，SCIENCEQA不包含任何用户使用数据或个人敏感信息，如性别和种族。</p>
+<hr />
+<h2 id="论文-5">论文 5：<a class="headerlink" href="#论文-5" title="Permanent link">&para;</a></h2>
+<h4 id="d-vlog-multimodal-vlog-dataset-for-depression-detection">D-vlog: Multimodal Vlog Dataset for Depression Detection<a class="headerlink" href="#d-vlog-multimodal-vlog-dataset-for-depression-detection" title="Permanent link">&para;</a></h4>
+<p><strong><em>D-vlog：用于抑郁检测的多模态 Vlog 数据集</em></strong></p>
+<p><strong>Abstract</strong></p>
+<p>文章主要研究了激光雷达和相机在自动驾驶中的3D检测应用。尽管现有的多模态方法通常只是用相机特征装饰原始激光雷达点云，并直接将它们输入到现有的3D检测模型中，但作者的研究表明，将相机特征与深度激光雷达特征（而不是原始点）融合，可以提高性能。然而，由于这些特征通常会被增强和聚合，融合中的一个关键挑战是如何有效地对齐两种模态的转换特征。因此，作者提出了两种新颖的技术：InverseAug和LearnableAlign。基于这两种技术，作者开发了一系列名为DeepFusion的通用多模态3D检测模型，其精度超过了以前的方法。例如，DeepFusion在行人检测上改进了PointPillars、CenterPoint和3D-MAN基线，分别提高了6.7、8.9和6.2的LEVEL_2 APH。值得注意的是，作者的模型在Waymo开放数据集上取得了最先进的性能，并显示出对输入腐败和分布外数据的强大模型鲁棒性。</p>
+<p><strong>Abstract</strong></p>
+<p>文章主要研究了如何通过多模态的vlog数据集来检测抑郁症。文章首先介绍了抑郁症的严重性和普遍性，以及目前对抑郁症的诊断主要依赖于临床医生的主观判断，这种方法存在一定的局限性。因此，研究者们提出了一个新的方法，即通过分析vlog（视频博客）中的多模态数据（包括文本、音频和视频）来检测抑郁症。文章中，作者们提出了一个名为"D-vlog"的数据集，这是一个包含了大量vlog的数据集，这些vlog来自于公开的网络平台，如YouTube。这些vlog中的人物都有抑郁症的症状，因此这个数据集可以用来训练和测试抑郁症检测的算法。文章还详细介绍了如何从vlog中提取多模态数据，包括文本、音频和视频数据，并且如何使用这些数据来训练和测试抑郁症检测的算法。此外，文章还讨论了这种方法的有效性和潜在的应用。</p>
+<p>总的来说，这篇文章提出了一个新的抑郁症检测方法，即通过分析vlog中的多模态数据来检测抑郁症，这种方法有可能改变抑郁症的诊断方式，使其更加客观和准确。</p>
+<p><strong>Related Work</strong></p>
+<p>1、<strong>Datasets for Depression Analysis and Detection</strong>：</p>
+<p>文章指出，目前存在一些公开的抑郁症数据集，但这些数据集大多在实验室环境中通过访谈形式收集，可能无法捕捉到抑郁个体在日常生活中的常态行为。因此，作者们提出了一个新的抑郁症数据集，该数据集包括在日常生活中捕捉到的抑郁个体的非言语行为。具体来说，他们首先使用如“抑郁症vlog”、“日常vlog”等搜索关键词收集了抑郁和非抑郁个体的vlog，然后根据开发的注释规则（例如，“给定的视频是否有vlog格式？”、“说话者是否正在遭受抑郁症？”等）手动注释了抑郁和非抑郁的vlog，并从中提取了声音和视觉特征。由于vlog是自愿录制和上传的，作者们认为他们的数据集包含的抑郁相关特征与非抑郁者的特征相比，比实验室环境中收集的先前数据集更自然。</p>
+<p>2、<strong>Detecting Depression Using Social Media Data</strong>：</p>
+<p>文章提到，学者们已经开发了基于社交媒体数据（如文本、图片和标签）的抑郁症检测模型。例如，Wang等人（2013）提出了一个使用Sina Weibo中的标签和文本的抑郁症检测模型。他们根据关于抑郁症的心理理论提取了基于内容、交互和行为的特征来训练模型。Gui等人（2019）应用了合作多代理强化学习方法，基于文本和图像特征识别Twitter用户的抑郁症。Orabi等人（2018）提出了一个词嵌入优化方法，并将其应用于检测Twitter上的抑郁个体。虽然这些研究都关注了使用社交媒体数据检测抑郁症，但对如何使用社交媒体上的视频数据检测抑郁症的模型和分析却没有给予足够的关注，这些视频数据可以捕捉到日常生活中的常态行为。</p>
+<p>3、<strong>Multimodal Fusion</strong>：</p>
+<p>多模态融合的目标是整合来自多种模态的信息以预测目标输出。在多模态融合的先前工作中，大多依赖于模型不可知的方法，如早期融合、晚期融合和混合融合。学者们通过简单地连接、添加或乘以特征/决策级向量来创建多模态表示，以执行预测任务。随着深度学习技术的进步，神经网络可以用于多模态融合。这些工作使用深度神经网络（如LSTM）来通过从多种模态生成联合表示来描述目标。为了有效地利用和融合多模态数据，我们采用了跨注意力机制来融合多模态信息。</p>
+<p><strong>Depression Vlog (D-Vlog) Dataset</strong></p>
+<p>该部分主要介绍了 D-Vlog 数据集的构建过程和特性。以下是该部分的主要内容：</p>
+<ol>
+<li><strong>数据收集</strong>：作者的目标是构建一个包含抑郁和非抑郁vlog的平衡数据集，以帮助模型学习与非抑郁特征明显不同的独特抑郁相关特征。为此，他们首先使用如“抑郁日常vlog”、“抑郁旅程”、“抑郁vlog”、“抑郁发作vlog”、“抑郁视频日记”、“我的抑郁日记”和“我的抑郁故事”等搜索关键词收集了YouTube视频。对于非抑郁vlog，他们使用了“日常vlog”、“准备就绪的我vlog”、“购物vlog”、“如何vlog”、“一天的vlog”、“谈话vlog”等关键词。使用这两种类型的关键词集，他们下载了4000个视频（即每种类型2000个视频），这些视频是从搜索结果中随机选择的。</li>
+<li><strong>数据标注</strong>：为了将收集的视频标记为抑郁和非抑郁vlog，他们招募了四名大学生。他们教育标注者使用标注规则和样本视频，以确保所有vlog的标注质量相似。他们为每个标注者分配1000个视频（即每个标签500个vlog），并要求他们完成两项任务。首先，标注者确定给定的视频是否有“vlog”格式，即一个人直接对着摄像头讲话。也就是说，他们移除了不符合“vlog”格式的视频（例如，一群人，视频中没有面孔），以便从视频中的人物提取声音和视觉特征。接下来，标注者仔细观看带有自动生成字幕的视频，以确定视频中的演讲者是否有抑郁症。需要注意的是，他们只考虑英文视频，因为标注者需要理解单词的上下文。</li>
+<li><strong>数据统计</strong>：他们在表2中提供了最终标注数据集的描述性统计信息。数据集由555个抑郁vlog和406个非抑郁vlog组成，平均长度分别为640.12秒和536.38秒。他们发现在抑郁vlog中，女性的数量是男性的两倍，这与之前的工作显示的主要抑郁症患者中女性比例较高的结果一致。</li>
+<li><strong>特征提取</strong>：对于声音和视觉特征，他们都将时间步长截断或用零填充，使所有样本的长度都相同。为了去除数据集中每个演讲者的身份，他们只提供提取的特征，而不提供音频和视频文件。因此，无法通过这些特征识别个体。他们遵循了由机构审查委员会（IRB）指导的所有匿名化过程。</li>
+</ol>
+<p><strong>Multimodal Depression Detection</strong></p>
+<ol>
+<li><strong>多模态融合</strong>：多模态融合的目标是整合来自多种模态的信息以预测目标输出。以前的多模态融合工作主要依赖于模型不可知的方法，如早期融合，晚期融合和混合融合。学者们通过简单地连接、添加或乘以特征/决策级向量来创建多模态表示以执行预测任务。随着深度学习技术的进步，神经网络可以用于多模态融合。这些工作使用深度神经网络（例如，长短期记忆网络）来通过从多种模态生成联合表示来表征目标。在这个模型中，作者们采用了跨注意力机制来有效地捕捉声学和视觉特征之间的关系，并生成有用的多模态表示用于抑郁症检测。</li>
+<li><strong>抑郁症检测模型</strong>：抑郁症检测模型使用了非语言特征，即声学和视觉特征，从给定的视频中提取。该模型使用Transformer编码器来编码声学和视觉序列，并使用交叉注意力机制来融合它们，以生成用于抑郁症检测的表示。最后，抑郁症检测层预测vlog的抑郁症标签。此外，该模型使用了单模态Transformer编码器来生成每个输入模态的表示。因此，该模型不仅限于声学和视觉特征，任何其他模态都可以通过使用单模态编码器简单地添加。为了模型化序列输入数据，他们首先对特征向量进行下采样，通过应用一维卷积层处理局部关系，并使用位置编码层。然后，他们使用了原始的Transformer编码器，该编码器由自注意力和前馈层组成。由于自注意力层引导单模态Transformer编码器关注每个模态内的重要线索，单模态表示可以使模型捕获用于抑郁症检测的有用知识。这个模型的开发是基于这样的观察，即抑郁症和非抑郁症的个体可以通过非语言信号，如面部表情、身体动作和声音强度来区分。因此，这个模型试图利用这些非语言信号来检测抑郁症。</li>
+<li><strong>实验结果</strong>：广泛的实验结果表明，提出的模型显著优于其他基线模型。作者认为他们的数据集和提出的模型对于基于非语言行为分析和检测抑郁症的个体是有用的。</li>
+</ol>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-29</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-25</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-29</span>
       
     
   </small>
